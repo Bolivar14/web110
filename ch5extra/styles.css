@@ -1,0 +1,61 @@
+/*Andreina Bolivar-Campbell 6/17/25*/
+body{
+    background-color: rgb(0, 2, 61); /*all colors chosen from image*/
+    color: rgb(228, 92, 4);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4); /*learned doing in WEB114 self practice*/
+} /*2px right, 2px down, 3px blur radious, with a soft black color at 40% opacity.*/
+.slide-header {
+    background-color: rgb(0, 2, 61);
+    color: rgb(247, 50, 130);
+    font-size: 36px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    top: -100px; /*Start off-screen*/
+    animation: slideDown 1s ease-out forwards;
+
+}
+@keyframes slideDown {
+    from{
+        top: -100px;
+    }
+    to{
+        top: 0;
+    }
+}
+/*I just learned to do this in my WEB114 self practice*/
+footer{
+    background-image: url('skyline.jpg'); /*AI generated image*/
+    background-size: cover; /*to cover footer area*/
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding: 40px 0;
+    color:aliceblue; /*text color chosen for visbility*/
+    text-align: center;
+    position: fixed; /*So footer will stay present as user scrolls*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.slide-header h1{
+    text-decoration: underline;
+}
+main {
+    padding-bottom: 120px; /*to add enough space above the fixed footer*/
+}
+#goal {
+    font-style: italic;
+}
+#footertext {
+    font-style: italic;
+    padding-top: 75px;
+}/* to move text towards the bottom of the background image*/
+.highlight {
+    color: rgb(23, 215, 228);
+}
+h2, h3 {
+    font-weight: bold;
+    
+}
