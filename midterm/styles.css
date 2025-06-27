@@ -1,0 +1,180 @@
+/*Andreina Bolivar-Campbell 06/22/2025 midterm project*/
+/*Universal Selector*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*body and main content sections*/
+body{/*basic layout and colors*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: #b1a1ec;
+    color: #000;
+    padding: 1em;
+}
+
+main{ /*corrected the empty space on right*/
+    margin-left: auto;
+    margin-right: auto;
+    width:70%;
+}
+/*header designs*/
+header{/*Large header, centered, text color yellow*/
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    position: relative;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('loom.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.9; /* Adjust to change opacity */
+  z-index: -1;
+}
+
+h1{
+    color: #f0ecfb; /*color fill*/
+    -webkit-text-stroke: 1px black;/*Creates dark outline on text*/
+    font-size: 3rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);/*create a shadow on text*/
+
+}
+h2{
+    -webkit-text-stroke: 0.2px #e13b07;/*creating an orange outline on font*/
+    color: black;
+    padding-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    
+}
+
+.text-block{
+    overflow: hidden;
+    flex: 1; /*this lets the text grow*/
+}
+.text-block ul{
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+/*images*/
+img{/*images in webpage sizing*/
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* for rounded corners*/
+    box-shadow: 0 0 15px 8px #e13b07;/*burnt orange*/
+}
+
+.float-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #a58a9b;
+    padding-bottom: 1.5rem;
+
+}
+.float-section img{
+    float: left;
+    width: 300px;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #b02e2e;
+}
+
+
+/*navigation section*/
+nav{
+    padding: 1.5rem 0; /*top and bottom, then left and right*/
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    gap: 2em;
+    
+}
+nav li{
+    display: inline;
+    
+}
+nav a:hover{
+    color: rgb(250, 55, 250);
+}
+nav a{
+    color: black;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: bold;
+}
+a:visited{
+    color: #4605f8; 
+}
+/*Lists layout*/
+ul{
+    padding-bottom: 1rem;
+}
+ol{
+    padding-bottom: 1rem;
+    padding-left: 40px; /*global reset over riding default styles using this to help add numbers to ol*/
+    list-style-type: decimal;
+}
+section{
+     box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+     margin-top: 2rem;
+     margin-bottom: 1.5rem;
+    
+}
+/*hobby sections*/
+#vibes{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('beach.jpg');/*use image as background on hobbies page only*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2em;
+    color: #f0ecfb;
+}
+#hobby{
+    list-style-type: none;
+    font-weight: bold;
+    text-align: center;
+}
+.vibe-img {/*dancing image, make transparent on beach background*/
+    max-width:100%;
+    width:50%;
+    height: auto;
+    display: block;
+    margin:1rem auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+}
+/*footer section design*/
+footer{
+    padding-top: 15px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    background-image: url('loom.jpg');/*Using beading image for background*/
+    color:#f0ecfb;
+
+    
+}
+a[href^="mailto:"] {
+    color: orangered;/*make email text orange red*/
+}
