@@ -1,0 +1,67 @@
+/*Chapter 8 project Andreina Bolivar-Campbell 7/2/25*/
+* {/*resets spaceing and makes sizing more predictable, affects everything on page*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial;
+    background-color: #f8f8f8; /*set's font, light gray background, dark text, and better line spacing*/
+    color: #333;
+    line-height: 1.6;
+}
+header {/*makes the top of the page red with white text, centered and padded*/
+    background-color: #b22234;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+h1 {/*makes the main title bigger*/
+    font-size: 2em;
+}
+nav {/*adds space above the navigation bar*/
+    margin-top: 15px;
+}
+.nav {/*turns the nav into a flex row, removes bullets, spaces out links*/
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    padding: 10px 0;
+}
+.nav li a {/*makes nav links bold, white, and removes underlines*/
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.hero-image{/*makes the fireworks image full-width, keeps it neat, adds rounded corners*/
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.flexbox-image{/*centers and resizes the Flexbox diagram, adds border*/
+    width: 50%;
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+main {/*adds space around the main content*/
+    padding: 20px;
+}
+section {/*adds space between each content section*/
+    margin-bottom: 20px;
+}
+footer { /*makes the bottom dark gray with white text, centered*/
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+@media (max-width: 800px) {/*changes nav layout to vertical on small screens like phones*/
+    .nav {flex-direction: column;
+    align-items: center;}
+}
