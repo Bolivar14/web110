@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--Andreina Bolivar-Campbell 7/8/2025 Grid Project-->
+<html lang="en">
+    <head>
+        <!--Metadata will go here-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>10 great places</title>
+        <style>
+            *{
+                margin: 0; /* Reset margin */
+                padding: 0;
+                box-sizing: border-box;/* Ensure padding and border are included in element's total width and height */
+            }
+         
+            body{
+                background: linear-gradient(9deg, #d4d2d6, #200b30);/* Gradient background */
+                padding: 15px;
+                border: 2px solid #190329;
+                border-radius: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #fff; /* Text color */
+                min-height: 100vh; /* Full height */
+            }
+            h1,h2{
+                font-size: 3vh; /* Responsive font size */
+                padding: 2vh; /* Responsive padding */
+            }
+            h2{
+                border-bottom: 2px solid #25053a; /* Bottom border for h2 */
+                margin-bottom: 10px; /* Margin below h2 */
+            }
+            .grid-wrapper{
+                display: grid; /* enables grid layout */
+                grid-gap: 10px; /* Space between grid items */
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-auto-rows: 250px; /*sets each grid row height to 250px by default*/
+                grid-auto-flow: dense; /* Fills in gaps in the grid */
+            }
+            .wide{
+                grid-column: span 2; /* Spans two columns */
+             
+                
+               
+            }
+            .tall{
+                grid-row: span 2; /* Spans two rows */
+    
+            }
+            .big{
+                grid-column: span 2;
+                grid-row: span 2; /* Spans two columns and two rows */
+                
+            }
+           
+            figure{
+                margin: 0;
+                border-radius: 5px;
+                overflow: hidden; /* Ensures no overflow */
+                border: 2px solid #190329; /* Border around figure */
+                background: #2a1f46;
+                display: flex; /* Flexbox for centering content */
+                flex-direction: column; /* Column layout */
+                height: 100%; /* Full height of grid cell */
+            }
+            figure img{
+                width: 100%;
+                height: auto; /* Maintain aspect ratio */
+                object-fit: cover;
+                display: block;
+                border-bottom: 1px solid #190329;
+                flex-grow: 1; /* Allows image to grow and fill space */
+            }
+            figcaption{
+                padding: 8px 10px;
+                background-color: #200b30; /* Dark background for caption */
+                color: white;
+                font-size: 2.5vh; /* Responsive font size */
+                text-align: center; /* Center text */
+                flex-shrink: 0; /* Prevents shrinking */
+            }
+        </style>
+    </head>
+         <body>
+             <!--Page content goes here-->
+             <header>
+                <h1>A top 10 list of places to visit in the U.S. according to Travel Advisor</h1>
+                    <h2>What are your top 10?</h2>
+             </header>
+             <main>
+                <!--content sections go here-->
+                <div class="grid-wrapper"><!--changed from <section> to <div> to make semantically correct-->
+
+                    <figure class="big"> <!--moved here to allow better formatting-->
+                    <img src="images/lasvegas.jpg" alt="Las Vegas">
+                    <figcaption>Las Vegas</figcaption>
+                    </figure>
+
+                    <figure>
+                    <img src="images/empirestate.jpg" alt="Empire State Building">
+                    <figcaption>Empire State Building</figcaption>
+                    </figure>
+
+                    <figure>
+                    <img src="images/washingtondc.png" alt="Washington DC">
+                    <figcaption>Washington DC</figcaption>
+                    </figure>
+
+                    <figure class="tall">
+                    <img src="images/sanfran.jpg" alt="San Franisco">
+                    <figcaption>San Francisco</figcaption>
+                    </figure>
+
+                    <figure class="wide">
+                    <img src="images/orlando.png" alt="Orlando">
+                    <figcaption>Orlando</figcaption>
+                    </figure> 
+
+                    <figure class="tall">
+                    <img src="images/grandcanyon.jpg" alt="Grand Canyon">
+                    <figcaption>Grand Canyon</figcaption>
+                    </figure>
+
+                    <figure class="big">
+                    <img src="images/yellowstone.webp" alt="Yellowstone National Park">
+                    <figcaption>Yellowstone National Park</figcaption>
+                    </figure>
+
+                    <figure>
+                    <img src="images/sandiego.jpg" alt="San Diego">
+                    <figcaption>San Diego</figcaption>
+                    </figure>
+
+                    <figure class="tall">
+                    <img src="images/niagra.jpg" alt="Niagara Falls">
+                    <figcaption>Niagara Falls</figcaption>
+                    </figure>
+
+                    <figure>
+                    <img src="images/miami.jpg" alt="Miami">
+                    <figcaption>Miami</figcaption>
+                    </figure>
+                    
+                </div>
+             </main>
+         </body>
+</html>
