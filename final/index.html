@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--Andreina Bolivar-Campbell 07/16/2025-->
+<html lang="en">
+    <head>
+        <title>10 Best Practices for CSS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="form.html">Contact Form</a></li>
+            <li><a href="10-best-csspractices-cheatsheet.pdf" download>Download CSS Best Practices Guide</a></li>
+            <!--added for extra learning practice of CSS code-->
+            <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Learn More</a></li>
+        </ul>
+    </nav>
+    <header><!--used AI to generate images-->
+       <img src="gradient-css.jpg" alt="css tag"> <h1>10 Best Practices for CSS</h1>
+    </header>
+    <div id="wrapper">
+<main>
+    
+     <div class="scroll-container">
+        <div class="scroll-track"><!--using to correct animation-->
+            <!--<ol> requirement-->
+            <ol class="scroll-list">
+                <li>Use External Stylesheets,</li> 
+                <li>Follow Consistent Naming Convention,</li>
+                <li>Use CSS Variables,</li>
+                <li>Keep Your CSS DRY (Don't Repeat Yourself),</li>
+                <li>Optimize for Performance,</li>
+                <li>Use Flexbox & Grid for Layouts,</li>
+                <li>Implement Responsive Design with Media Queries,</li>
+                <li>Avoid Overusing !important,</li>
+                <li>Organize Styles Logically,</li>
+                <li>Validate Your CSS</li>
+            </ol>
+          
+        </div>
+        </div>
+        <div class="queries">
+    <!--<p> & column requirements, cut long sentences to multiple lines for better code readability-->
+            <p class="question">Why do we need these practices?</p>
+
+                <p class="answer">We rely on CSS best practices to create websites that are clean,
+                    adaptable, and easy to maintain — 
+                    especially as layouts evolve and collaborative development becomes more essential.
+                    They serve as a foundation for consistency and efficiency,
+                    helping your designs stay functional across devices and team workflows.</p>
+
+            <p class="question">What are the consequences of skipping these practices?</p>
+
+                <p class="answer">Ignoring CSS best practices might seem trivial at first,
+                    but it can quickly unravel into a chaotic mess—slowing development,
+                    creating confusion for your team, and leading to broken designs on different devices</p>
+
+            <p class="question">What is the best way to remember these rules?</p> 
+
+            <!--longer sentences cut to display on multiple lines for better readability of code-->
+                <p class="answer">Best ways to remember these practices: Use checklists while coding,
+                    practice with purpose, use Mnemonics or Acronyms: C.R.O.W.N.F.L.U.V.V.</p>
+            <!--Requirement for <ul>-->
+            <ul>
+                <li>C-Comments</li>
+                <li>R-Responsive design</li>
+                <li>O-Organized styles</li>
+                <li>W-Wireframe tags</li>
+                <li>N-Naming Conventions</li>
+                <li>F-Flexbox/Grid</li>
+                <li>L-Liquid layout</li>
+                <li>U-Unused styles removed</li>
+                <li>V-Validation</li>
+                <li>V-Variables</li>
+            </ul>
+        </div>
+
+    <!--Table Requirement-->
+        <table>
+        <!--table title-->
+            <caption>Adhering vs Abandoning The Best CSS Practices</caption>
+            <thead><!--table main subjects-->
+                <tr>
+                    <th>CSS Practice</th>
+                    <th>Advantages of Applying the Practice</th>
+                    <th>Consequences of Skipping the Practice</th>
+                </tr>
+            </thead>
+            <tbody><!--table information: Practice, Advantages, Disadvantages-->
+                <tr>
+                    <td>External Stylesheets</td>
+                    <td>Reusability, Cleaner Code by reducing clutter in HTML files,and Faster Load times</td>
+                    <td>Messy HTML, Redundant code, Harder updates</td>
+                </tr>
+                <tr><!--longer sentences typed on multiple lines to improve readability of code throught table-->
+                    <td>Consistent Naming Conventions</td>
+                    <td>Improved Readability, scalability, reduced errors, and enhanced collaboration
+                        (team members can understand and work with the code easily)</td>
+                    <td>Confusing code, style conflicts, harder debugging,and reduced reusability.</td>
+                </tr>
+                <tr>
+                    <td>Use CSS Variables</td>
+                    <td>Consistency across styles, easy global updates, improved maintainability,
+                        and dynamic styling with JavaScript.</td>
+                    <td>Repetitive code, difficult maintenance, limited flexibility, and performance concerns.</td>
+                </tr>
+                <tr>
+                    <td>Keep your CSS D.R.Y.</td>
+                    <td>Maintainability: you only need to update styles in one place, Consistency:
+                        shared styles ensure a uniform look, avoiding accidental design mismatches, cleaner code,
+                        Performance: smaller, optimized stylesheets load faster and are easier for browsers to process.</td>
+                    <td>Code Duplication: repeating styles increases file size and makes CSS harder to manage,
+                        Inconsistent Design: small changes may be missed in some areas, Harder debugging,
+                        and reduced flexibility.</td>
+                </tr>
+                <tr>
+                    <td>Optimize for Performance</td>
+                    <td>Faster load times, improved user experience, and reduced server load.</td>
+                    <td>Slow page load, CSS conflicts: style overrides and bugs, mobile responsiveness issues,
+                        and poor accessibility.</td>
+                </tr>
+                <tr>
+                    <td>Use of Flexbox & Grid for Layouts</td>
+                    <td>Layout control, responsive design, alignment options, and cleaner code.</td>
+                    <td>Poor responsiveness, layout challenges, time drain: needs more effort for debugging,
+                        and inconsistent design.</td>
+                </tr>
+                <tr>
+                    <td>Implementing Responsive Design</td>
+                    <td>Device flexibility, improved user experience, SEO boost, saves time and resource.</td>
+                    <td>Poor mobile experience, higher bounce rates,and accessibility barriers</td>
+                </tr>
+                <tr>
+                    <td>Avoid Overusing !important</td>
+                    <td>Cleaner cascading logic: lets CSS do its job naturally, Easier maintenance,
+                        better collaboration among team members, and improved debugging. </td>
+                    <td>Broken inheritance and cascade: overrides natural CSS behavior, Styling conflicts:
+                        difficult to make small adjustments, unscalable codebase, accessibility issues.</td>
+                </tr>
+                <tr>
+                    <td>Organize Styles Logically</td>
+                    <td>Improved readability with clear structure, efficient maintenance making changes easily,
+                        and better tool support.</td>
+                    <td>Hard to debug with styles overwriting each other,and time drain:
+                        you end up re-writing instead of refining.</td>
+                </tr>
+                <tr>
+                    <td>Validating CSS Code</td>
+                    <td>Error Detection, cross-browser compatibility,and improved performance.</td>
+                    <td>Hidden bugs: invalid declarations may be silently ignored leading to broken designs,
+                        Browser inconsistencies,and harder debugging.</td>
+                </tr>
+                
+            </tbody>
+
+        </table>
+        
+
+</main>
+</div>
+
+        <footer><!--email requirement attached to name-->
+            <p>&copy; Copyright 2025, &nbsp; <a href="mailto:aboliva1@stumail.jccc.edu">Andreina Bolivar-Campbell</a>.</p>
+        </footer>
+</body>
+</html>

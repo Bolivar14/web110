@@ -1,0 +1,237 @@
+/*Andreina Bolivar-Campbell 7/16/2025 Final Project CSS*/
+* {
+    box-sizing: border-box;
+}
+/*general styling*/
+body {
+    background-color: #0d0630; /*Russian violet*/
+    color: #ffffff; /*white-ish*/
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline solid; 
+}
+img {
+    width: 200px;
+    height: auto;
+}
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+/*column requirement*/
+.queries {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px; /*space b/w <p>*/
+    margin: 2px auto;
+    align-items: start;
+}
+/*style for questions*/
+.queries p.question {
+   grid-column: 1;
+   font-weight: bold;
+   text-align: right;
+   border-right: 3px solid #46d8ef; /*bright sky blue*/
+   padding-right: 10px;
+}
+/*style for answers*/
+.queries p.answer {
+    grid-column: 2;
+    text-align: left;
+}
+/*Style for ul*/
+.queries ul {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: none; /*removes bullet points*/
+    padding: 0;
+    margin-top: 2em;
+}
+.queries ul li {
+    background-color: #054455;/*dull teal*/
+    color: #e6f9af; /*mindaro*/
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/*nav styling*/
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /*add space b/w links*/
+    background-color: #054455; /*dull teal*/
+    padding: 10px;
+    list-style-type: none; /*removes bullet points*/
+    
+}
+nav a {
+    text-decoration: none;
+    color: #e6f9af; /*mindaro*/
+    margin: 0 15px; /*0 top & bottom margins, 15px left & right margins*/
+    font-weight: bold;
+}
+nav a:hover {
+    color: #4e9bbd;
+}
+
+/*<ol> styling*/
+ol  {
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    list-style-type: none;
+    margin: 15px 0;
+    font-size: 16px;
+    list-style-type: decimal; /*keeps <ol> numbers*/
+}
+
+
+/*moves list from right to left indefinitely,
+flex to keep horizontal*/
+.scroll-container {
+    position: relative; /*parent element*/
+    width: 100%;
+    overflow: hidden;
+    height: 85px;
+}
+
+.scroll-list {
+    position: absolute; /*child element, absolute will position itself based on parent*/
+    white-space: nowrap;
+    font-size: 1.2em; /*makes the font 1.2x the size of its parent's font-size*/
+    left: 100%; /*start offscreen to the right*/
+    transition: transform 0.3s ease-in; /*transition for smoother animation*/
+    animation-delay: 1s; /*starts 1 second after page loads*/
+    animation: scrollAcross 50s linear infinite; /*set to 50 seconds for readability*/
+    animation-fill-mode: forwards; /*keeps final state of animation when finished*/
+    will-change: transform;
+    gap: 20px;
+}
+.scroll-track {
+    display: flex;
+    gap: 30px;
+    white-space: nowrap; /*prevents txt from wrapping on horizontal scrolling*/
+}/*white-space controls how spaces, tabs, and line breaks behave within the element's content*/
+
+.scroll-list li {
+    white-space: nowrap;
+    font-size: 1em;
+    transition: transform 0.5s ease;
+    padding-right: 15px; /*creates space b/w <li>*/
+}
+
+@keyframes scrollAcross {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-125%);/*allows enough time for list to finish & to start repeat*/
+    }
+}
+
+
+/*table styling*/
+caption {
+    font-size: 25px;
+    font-weight: bold; /*making caption appear bold*/
+    text-decoration: underline;
+    padding-bottom: 40px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse; /*makes all cells line up perfectly*/
+    margin: 1em 0; /*1em gives space above & below, 0 (no space) on left & right*/
+    font-size: 1rem; /*rem makes font size the same as the root element*/
+}
+th, td {
+    border: 1px solid #cccccc; /*off white from red base*/
+    padding: 0.75em;
+    text-align: left;
+    vertical-align: top;
+}
+thead th {
+    background-color: #0b1435;
+    font-weight: bold;
+    color: #46d8ef; /*bright sky blue*/
+}
+/*background colors for even and odd lines in table*/
+tr:nth-child(even) {
+    background-color: #18314f; /*Prussian Blue*/
+}
+tr:nth-child(odd) {
+    background-color: #384e77; /*YinMn Blue*/
+    
+}
+/*footer styling*/
+footer {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+a[href^="mailto:"] {
+    color: #46d8ef; /*bright sky blue*/
+    text-decoration: none;
+    transition: color 0.3s ease; /*color targets text, 0.3s: duration in sec, ease: timing function*/
+}
+a[href^="mailto:"]:hover {
+    color: #e6f9af; /*mindaro*/
+    text-decoration: underline; /*underline & color change appears when hovering over link*/
+}
+/* media query for mobile phones */
+@media (max-width: 600px) {
+    header {
+        font-size: 1.2em;
+      }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+    .form-pic {
+        text-align: center;
+        margin-top: 1em;
+      }
+
+    .form-pic img {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+    form {
+        padding: 0.5em;
+      }
+
+    input, textarea, select {
+        width: 100%;
+        font-size: 1em;
+      }
+
+    label {
+        font-size: 1em;
+      }
+    .queries {
+        grid-template-columns: 1fr;
+    }
+    .queries p.question,
+    .queries p.answer {
+        grid-column: 1;
+        text-align: center;
+        border: none;
+     }
+
+    .queries ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    }

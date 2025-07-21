@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--Andreina Bolivar-Campbell 7/16/2025 final project Form page-->
+<html lang="en">
+    <head>
+        <title>CSS Contact Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    /*required internal style sheet for forms, 1st section: general styling*/
+body {
+    background-color: #0d0630; /*Russian violet*/
+    color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: underline solid;
+    color:  #46d8ef; 
+}
+/*navigation styling*/
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /*add space b/w links*/
+    background-color: #054455;
+    padding: 10px;
+    list-style-type: none;
+    
+}
+nav a {
+    text-decoration: none;
+    color: #e6f9af; /*mindaro*/
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #4e9bbd;
+}
+
+form, .scroll-container,
+#wrapper {
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 80%;
+}
+/*image styling, bottom right side*/
+.form-pic {
+    position: relative;
+    margin-top: 2em;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    margin-top: 2em;
+}
+.form-pic img {
+    width: 300px;
+    height: auto;
+    margin: 0;
+}
+/*form input, radio, & checkbox styling*/
+input, textarea, select {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto; 
+    margin-bottom: 1em;
+}
+/*added fieldset to help align buttons with labels*/
+fieldset {
+    border: none;
+    margin-bottom: 1em;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+input[type="radio"], input[type="checkbox"]{
+    margin: 0;
+}
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+.radio-group label, .checkbox-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/*submit and reset button styling for size & alignment*/
+input[type="submit"], input[type="reset"] {
+    display: inline-block;
+    width: 45%;
+    max-width: 300px;
+    margin: 1em 2.5% 1em 0;
+    padding: 0.75em;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+/*submit & reset button color scheme*/
+input[type="submit"] {
+    background-color: #46d8ef;
+    color: black;
+}
+input[type="reset"] {
+    background-color:  #054455; /*dull teal*/
+    color:  #e6f9af; /*Mindaro*/
+}
+/*footer styling*/
+footer {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+/*email link styling*/
+a[href^="mailto:"] {
+    color: #46d8ef; /*Bright sky blue*/
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a[href^="mailto:"]:hover {
+    color: #e6f9af; /*mindaro*/
+    text-decoration: underline;
+}
+/* media query for mobile phones */
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.2em;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .form-pic {
+        text-align: center;
+        margin-top: 1em;
+      }
+
+      .form-pic img {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      form {
+        padding: 0.5em;
+      }
+
+      input, textarea, select {
+        width: 100%;
+        font-size: 1em;
+      }
+
+      label {
+        font-size: 1em;
+      }
+    }
+
+</style>
+</head>
+
+<body>
+    <div id="wrapper">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="10-best-csspractices-cheatsheet.pdf" download>Download CSS Best Practices Guide</a></li>
+            <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">Learn More</a></li>
+        </ul><!--removed link to contact form for this pg since we're currently on the page-->
+    </nav>
+
+    <header>
+        <h1>Contact Form</h1> 
+    </header>
+
+    <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="phone">Phone number:</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <label for="date">Preferred Contact Date:</label>
+        <input type="date" id="date" name="date">
+
+<!--Radio buttons-->
+        <fieldset>
+           
+        <div class="radio-group">
+            <label>
+            Preferred Contact Method:
+            </label>
+          
+           
+            <label for="emailContact">
+            <input type="radio" id="emailContact" name="contactMethod" value="email">
+            Email   
+            </label>
+          
+            <label for="phoneContact">
+            <input type="radio" id="phoneContact" name="contactMethod" value="phone">
+            Phone:  
+            </label>
+        </div>
+
+        </fieldset>
+<!--Checkboxes-->
+        <fieldset>
+          
+        <div class="checkbox-group">
+            <label>
+            Topics of Interest:
+            </label>
+         
+           
+            <label for="css">
+            <input type="checkbox" id="css" name="interest" value="CSS">
+             CSS 
+            </label>
+           
+            <label for="html">
+            <input type="checkbox" id="html" name="interest" value="html"> 
+            HTML 
+            </label>
+          
+            <label for="responsive">
+            <input type="checkbox" id="responsive" name="interest" value="Responsive Design">  
+            Responsive Design
+            </label>
+        </div>
+
+        </fieldset>
+
+        <label for="feedback">Additional Comments</label>
+        <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+        <label for="experience">Experience</label>
+        <select id="experience" name="experience">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+<!--Submit & Reset buttons-->
+        <input type="submit" value="submit" name="Submit">
+        <input type="reset" value="reset" name="Reset">
+</form>
+
+        <div class="form-pic">
+             <img src="screen-css.jpg" alt="computer screen with css code">
+        </div><!--used AI to generate images-->
+
+<footer>
+   <p>&copy; Copyright 2025,&nbsp; <a href="mailto:aboliva1@stumail.jccc.edu">Andreina Bolivar-Campbell</a></p>
+</footer>
+
+</div>
+</body>
+</html>
